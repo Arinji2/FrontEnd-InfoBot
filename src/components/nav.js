@@ -29,7 +29,7 @@ class Nav extends Component {
         </div>
         <div
           id="mobile-menu"
-          className="hidden md:flex flex-col w-2/5 h-screen md:h-20 justify-center gap-10 md:w-screen md:flex-row border-b-2 border-white rounded text-lg md:pt-5 md:pb-3 md:justify-around md:sticky top-16 z-50 bg-black-950 hover:cursor-pointer "
+          className="hidden absolute md:flex flex-col min-w-screen h-30 md:h-20 justify-start gap-10 md:gap-0  md:flex-row border-b-2 border-white rounded text-lg md:pt-5 md:pb-3 md:justify-around md:sticky top-16 z-50 bg-black-950 hover:cursor-pointer overflow-hidden"
         >
           <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
             About {""}

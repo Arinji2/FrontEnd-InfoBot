@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="bg-black">
       <Nav />
+      <Hero />
     </div>
   );
 }
