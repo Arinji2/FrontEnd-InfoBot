@@ -29,25 +29,25 @@ class Nav extends Component {
         </div>
         <div
           id="mobile-menu"
-          className="hidden md:flex flex-col w-2/5 h-screen md:h-20 justify-evenly md:w-screen md:flex-row border-b-2 border-white rounded text-lg md:pt-5 md:pb-3 md:justify-around md:sticky top-0 z-50 bg-black-950 hover:cursor-pointer "
+          className="hidden md:flex flex-col w-2/5 h-screen md:h-20 justify-center gap-10 md:w-screen md:flex-row border-b-2 border-white rounded text-lg md:pt-5 md:pb-3 md:justify-around md:sticky top-16 z-50 bg-black-950 hover:cursor-pointer "
         >
-          <p className="p-2 shadow-lg shadow-white rounded hover:shadow-lg hover:shadow-yellow-500 hover:border-0 hover:rounded bg-black-950">
+          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
             About {""}
             <span className="text-yellow-500">Us</span>
           </p>
-          <p className="p-2 shadow-lg shadow-white rounded hover:shadow-lg hover:shadow-yellow-500 hover:border-0 hover:rounded bg-black-950">
+          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
             Choose a {""}
             <span className="text-yellow-500">Topic</span>
           </p>
-          <p className="p-2 shadow-lg shadow-white rounded hover:shadow-lg hover:shadow-yellow-500 hover:border-0 hover:rounded bg-black-950">
+          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
             New {""}
             <span className="text-yellow-500">Updates</span>
           </p>
-          <p className="p-2 shadow-lg shadow-white rounded hover:shadow-lg hover:shadow-yellow-500 hover:border-0 hover:rounded bg-black-950">
+          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
             Meet the {""}
             <span className="text-yellow-500">Team</span>
           </p>
-          <p className="p-2 shadow-lg shadow-white rounded hover:shadow-lg hover:shadow-yellow-500 hover:border-0 hover:rounded bg-black-950">
+          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
             Contact {""}
             <span className="text-yellow-500">Us</span>
           </p>
