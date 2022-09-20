@@ -1,5 +1,6 @@
 import Nav from "../src/components/nav";
 import Hero from "./components/hero";
+import About from "./components/about";
 import "./App.css";
 import React from "react";
 
@@ -8,6 +9,7 @@ function App() {
     <div className="bg-black">
       <Nav />
       <Hero />
+      <About />
     </div>
   );
 }

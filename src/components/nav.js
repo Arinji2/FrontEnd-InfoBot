@@ -10,11 +10,15 @@ class Nav extends Component {
     else menu.style.display = "none";
     button.classList.toggle("fa-rotate-90");
   }
+  handleAbout() {
+    let element = document.getElementById("aboutUs");
+    element.scrollIntoView({ behavior: "smooth" });
+  }
   render() {
     return (
       <React.Fragment>
         <div id="top"></div>
-        <div className="flex flex-row border-b-white border-b-2 rounded text-3xl pt-5 justify-between sticky top-0 z-50 bg-black-950 ">
+        <div className="flex flex-row rounded text-3xl pt-5 justify-between sticky top-0 z-50 bg-black-950 pb-2">
           <p className="pl-6">
             InfoBot<span className="text-yellow-500">.</span>
             <span className="absolute right-3 md:invisible">
@@ -29,9 +33,12 @@ class Nav extends Component {
         </div>
         <div
           id="mobile-menu"
-          className="hidden absolute md:flex flex-col min-w-screen h-30 md:h-20 justify-start gap-10 md:gap-0  md:flex-row border-b-2 border-white rounded text-lg md:pt-5 md:pb-3 md:justify-around md:sticky top-16 z-50 bg-black-950 hover:cursor-pointer overflow-hidden"
+          className="hidden fixed md:flex flex-col min-w-screen h-30 md:h-20 justify-start gap-10 md:gap-0  md:flex-row border-t-2  border-b-2 border-white rounded text-lg md:pt-5 md:pb-3 md:justify-around md:sticky top-16 z-50 bg-black-950 hover:cursor-pointer overflow-hidden"
         >
-          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
+          <p
+            onClick={this.handleAbout}
+            className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950"
+          >
             About {""}
             <span className="text-yellow-500">Us</span>
           </p>
