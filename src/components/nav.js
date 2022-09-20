@@ -18,6 +18,10 @@ class Nav extends Component {
     let element = document.getElementById("chooseUs");
     element.scrollIntoView({ behavior: "smooth" });
   }
+  handleTopic() {
+    let element = document.getElementById("topic");
+    element.scrollIntoView({ behavior: "smooth" });
+  }
   render() {
     return (
       <React.Fragment>
@@ -53,7 +57,10 @@ class Nav extends Component {
             Why {""}
             <span className="text-yellow-500">Us</span>
           </p>
-          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
+          <p
+            onClick={this.handleTopic}
+            className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950"
+          >
             Choose a {""}
             <span className="text-yellow-500">Topic</span>
           </p>

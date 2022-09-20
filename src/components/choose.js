@@ -54,6 +54,10 @@ class Choose extends Component {
             <p className="text-blue-500">Constant Updates</p>
           </div>
         </div>
+        <p className="p-10"></p>
+        <div className="flex justify-center">
+          <div className="w-screen border-b-2 border-white"></div>
+        </div>
       </div>
     );
   }
