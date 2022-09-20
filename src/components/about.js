@@ -33,7 +33,10 @@ class About extends Component {
             </p>
           </div>
         </div>
-        <p className="p-20"></p>
+        <p className="p-10"></p>
+        <div className="flex justify-center">
+          <div className="w-screen border-b-2 border-white"></div>
+        </div>
       </div>
     );
   }
