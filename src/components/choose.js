@@ -14,7 +14,7 @@ class Choose extends Component {
       <div id="chooseUs" className="m-5 rounded-lg text-center">
         <p className="p-16"></p>
         <div className="flex flex-col items-center md:flex-row flex-wrap max-w-screen gap-10 justify-evenly">
-          <h1 className="text-6xl md:pr-20">
+          <h1 className="text-6xl md:pr-32">
             Why Choose {""}
             <span className="text-yellow-500">Us</span>
           </h1>

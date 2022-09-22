@@ -3,6 +3,7 @@ import Hero from "./components/hero";
 import About from "./components/about";
 import Choose from "./components/choose";
 import Topics from "./components/topics";
+import Updates from "./components/updates";
 import "./App.css";
 import React from "react";
 
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Choose />
       <Topics />
+      <Updates />
     </div>
   );
 }
