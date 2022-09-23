@@ -26,6 +26,10 @@ class Nav extends Component {
     let element = document.getElementById("update");
     element.scrollIntoView({ behavior: "smooth" });
   }
+  handleContact() {
+    let element = document.getElementById("contact");
+    element.scrollIntoView({ behavior: "smooth" });
+  }
   render() {
     return (
       <React.Fragment>
@@ -79,7 +83,10 @@ class Nav extends Component {
             Meet the {""}
             <span className="text-yellow-500">Team</span>
           </p>
-          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
+          <p
+            onClick={this.handleContact}
+            className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950"
+          >
             Contact {""}
             <span className="text-yellow-500">Us</span>
           </p>
