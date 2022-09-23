@@ -1,5 +1,6 @@
 import { faBars } from "@fortawesome/fontawesome-free-solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import React, { Component } from "react";
 class Nav extends Component {
   state = {};
@@ -11,22 +12,36 @@ class Nav extends Component {
     button.classList.toggle("fa-rotate-90");
   }
   handleAbout() {
+    if (window.location.href !== "http://localhost:3000/")
+      window.location.assign("/");
     let element = document.getElementById("aboutUs");
     element.scrollIntoView({ behavior: "smooth" });
   }
   handleChoose() {
+    if (window.location.href !== "http://localhost:3000/")
+      window.location.assign("/");
     let element = document.getElementById("chooseUs");
     element.scrollIntoView({ behavior: "smooth" });
   }
   handleTopic() {
+    if (window.location.href !== "http://localhost:3000/") {
+      window.location.assign("/");
+    }
     let element = document.getElementById("topic");
     element.scrollIntoView({ behavior: "smooth" });
   }
   handleUpdates() {
+    if (window.location.href !== "http://localhost:3000/")
+      window.location.assign("/");
     let element = document.getElementById("update");
     element.scrollIntoView({ behavior: "smooth" });
   }
+  handleTeam() {
+    window.location.assign("/Team");
+  }
   handleContact() {
+    if (window.location.href !== "http://localhost:3000/")
+      window.location.assign("/");
     let element = document.getElementById("contact");
     element.scrollIntoView({ behavior: "smooth" });
   }
@@ -79,10 +94,15 @@ class Nav extends Component {
             New {""}
             <span className="text-yellow-500">Updates</span>
           </p>
-          <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
-            Meet the {""}
-            <span className="text-yellow-500">Team</span>
-          </p>
+          <Router>
+            <Link to="/Team" onClick={this.handleTeam}>
+              <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
+                Meet the {""}
+                <span className="text-yellow-500">Team</span>
+              </p>
+            </Link>
+          </Router>
+
           <p
             onClick={this.handleContact}
             className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950"

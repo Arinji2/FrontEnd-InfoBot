@@ -1,23 +1,20 @@
 import Nav from "../src/components/nav";
-import Hero from "./components/hero";
-import About from "./components/about";
-import Choose from "./components/choose";
-import Topics from "./components/topics";
-import Updates from "./components/updates";
-import Contact from "./components/contact";
+import Home from "./pages/home";
+import Team from "./pages/team";
 import "./App.css";
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="bg-black">
       <Nav />
-      <Hero />
-      <About />
-      <Choose />
-      <Topics />
-      <Updates />
-      <Contact />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/team" element={<Team />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
