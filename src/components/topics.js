@@ -31,18 +31,18 @@ class Topics extends Component {
         <p className="p-16"></p>
         <h1 className="text-6xl p-10">
           Choose A {""}
-          <span className="text-green-500">Topic</span>
+          <span className="text-yellow-500">Topic</span>
         </h1>
         <div className="flex flex-row items-center  flex-wrap md:max-w-screen gap-10 justify-between md:justify-evenly">
           <div
             onClick={this.handleTopic.bind(this, 1)}
-            className="border-4 border-white border-r--500 border-t-green-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
+            className="border-4 border-white border-r--500 border-t-yellow-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
           >
             <p className="text-blue-500">Loops</p>
           </div>
           <div
             onClick={this.handleTopic.bind(this, 2)}
-            className="border-4 border-white border-r--500 border-t-green-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
+            className="border-4 border-white border-r--500 border-t-yellow-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
           >
             <p className="text-blue-500">Patterns</p>
           </div>
@@ -50,13 +50,13 @@ class Topics extends Component {
         <div className="flex flex-row items-center  flex-wrap max-w-screen justify-between pt-6">
           <div
             onClick={this.handleTopic.bind(this, 3)}
-            className="border-4 border-white border-r--500 border-t-green-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
+            className="border-4 border-white border-r--500 border-t-yellow-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
           >
             <p className="text-blue-500">Series</p>
           </div>
           <div
             onClick={this.handleTopic.bind(this, 4)}
-            className="border-4 border-white border-r--500 border-t-green-500 text-lg md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
+            className="border-4 border-white border-r--500 border-t-yellow-500 text-lg md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
           >
             <p className="text-blue-500">Methods</p>
           </div>
@@ -64,13 +64,13 @@ class Topics extends Component {
         <div className="flex flex-row items-center  flex-wrap max-w-screen justify-between pt-6">
           <div
             onClick={this.handleTopic.bind(this, 5)}
-            className="border-4 border-white border-r--500 border-t-green-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
+            className="border-4 border-white border-r--500 border-t-yellow-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
           >
             <p className="text-blue-500">Arrays</p>
           </div>
           <div
             onClick={this.handleTopic.bind(this, 6)}
-            className="border-4 border-white border-r--500 border-t-green-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
+            className="border-4 border-white border-r--500 border-t-yellow-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
           >
             <p className="text-blue-500">Classes</p>
           </div>
@@ -78,7 +78,7 @@ class Topics extends Component {
         <div className="flex flex-row items-center  flex-wrap max-w-screen justify-center  pt-6">
           <div
             onClick={this.handleTopic.bind(this, 7)}
-            className="border-4 border-white border-r--500 border-t-green-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
+            className="border-4 border-white border-r--500 border-t-yellow-500 text-xl md:text-2xl max-w-screen md:w-2/6 p-5 hover:border-r-blue-500 hover:border-t-blue-500 hover:text-3xl hover:cursor-pointer  transition-all ease-in-out duration-300 "
           >
             <p className="text-blue-500">Strings</p>
           </div>
