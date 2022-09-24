@@ -12,26 +12,26 @@ class Nav extends Component {
     button.classList.toggle("fa-rotate-90");
   }
   handleAbout() {
-    if (window.location.href !== "http://localhost:3000/")
+    if (window.location.href !== "https://www.infobot.uk/")
       window.location.assign("/");
     let element = document.getElementById("aboutUs");
     element.scrollIntoView({ behavior: "smooth" });
   }
   handleChoose() {
-    if (window.location.href !== "http://localhost:3000/")
+    if (window.location.href !== "https://www.infobot.uk/")
       window.location.assign("/");
     let element = document.getElementById("chooseUs");
     element.scrollIntoView({ behavior: "smooth" });
   }
   handleTopic() {
-    if (window.location.href !== "http://localhost:3000/") {
+    if (window.location.href !== "https://www.infobot.uk/") {
       window.location.assign("/");
     }
     let element = document.getElementById("topic");
     element.scrollIntoView({ behavior: "smooth" });
   }
   handleUpdates() {
-    if (window.location.href !== "http://localhost:3000/")
+    if (window.location.href !== "https://www.infobot.uk/")
       window.location.assign("/");
     let element = document.getElementById("update");
     element.scrollIntoView({ behavior: "smooth" });
@@ -40,7 +40,7 @@ class Nav extends Component {
     window.location.assign("/Team");
   }
   handleContact() {
-    if (window.location.href !== "http://localhost:3000/")
+    if (window.location.href !== "https://www.infobot.uk/")
       window.location.assign("/");
     let element = document.getElementById("contact");
     element.scrollIntoView({ behavior: "smooth" });
