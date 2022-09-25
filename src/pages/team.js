@@ -11,7 +11,10 @@ import Shreeniket from "../assets/profiles/Shreeniket.png";
 import Shreshth from "../assets/profiles/Shreshth.png";
 import Anwesha from "../assets/profiles/Anwesha.png";
 import Yuvraj from "../assets/profiles/Yuvraj.png";
-import unknown from "../assets/profiles/unknown.png";
+import Vedant from "../assets/profiles/Vedant.png";
+import Siddhartha from "../assets/profiles/Siddhartha.png";
+import Shreyans from "../assets/profiles/Shreyans.png";
+import Nikhilesh from "../assets/profiles/Nikhilesh.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -26,6 +29,39 @@ class Team extends Component {
           Meet the <span className="text-yellow-500">Executives</span>
         </h1>
         <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
+          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
+              <img
+                src={Arinji}
+                alt={Arinji}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+              <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
+                <a href="mailto:arinjaydhar205@gmail.com">
+                  <FontAwesomeIcon icon={faEnvelope} className="" />
+                </a>
+              </div>
+              <div className="absolute bottom-0 right-0 mr-3 mb-5 text-xl">
+                <a
+                  href="https://www.instagram.com/34arinji/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="" />
+                </a>
+              </div>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">Arinjay Dhar</p>
+            <p className="pb-3 text-yellow-500 text-xl">
+              Chief Executive Officer
+            </p>
+            <p className="w-56 break-words">
+              Creator of the Site, Extroverted and Excited. Loves coding in
+              React Js and aspires to work for Google. Exceptionally bad at
+              Hindi and has a weird American Accent. Caffeinated 24/7.
+            </p>
+          </div>
           <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
@@ -61,39 +97,7 @@ class Team extends Component {
               Loves computer applications, yellow lays and the sky.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
-            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
-              <img
-                src={Arinji}
-                alt={Arinji}
-                className="rounded-lg pb-3 h-56 w-56"
-              ></img>
-              <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
-                <a href="mailto:arinjaydhar205@gmail.com">
-                  <FontAwesomeIcon icon={faEnvelope} className="" />
-                </a>
-              </div>
-              <div className="absolute bottom-0 right-0 mr-3 mb-5 text-xl">
-                <a
-                  href="https://www.instagram.com/34arinji/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className=""
-                >
-                  <FontAwesomeIcon icon={faInstagram} className="" />
-                </a>
-              </div>
-            </div>
-            <p className="p-3 border-t-2 border-white text-2xl">Arinjay Dhar</p>
-            <p className="pb-3 text-yellow-500 text-xl">
-              Chief Executive Officer
-            </p>
-            <p className="w-56 break-words">
-              Creator of the Site, Extroverted and Excited. Loves coding in
-              React Js and aspires to work for Google. Exceptionally bad at
-              Hindi and has a weird American Accent. Caffeinated 24/7.
-            </p>
-          </div>
+
           <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
@@ -156,9 +160,8 @@ class Team extends Component {
             <p className="pb-3 text-yellow-500 text-xl">Manager</p>
             <p className="w-56 break-words">
               Simple yet Marvelous. Always there to support all her peers, and
-              never lets anyone feel left out. A follower of the saying "Work
-              hard and party harder". Hates holding grudges and is loved by
-              everyone.
+              never lets anyone feel left out. Hates holding grudges and is
+              loved by everyone.
             </p>
           </div>
         </div>
@@ -166,8 +169,8 @@ class Team extends Component {
           <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
-                src={unknown}
-                alt={unknown}
+                src={Vedant}
+                alt={Vedant}
                 className="rounded-lg pb-3 h-56 w-56"
               ></img>
               <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
@@ -186,7 +189,7 @@ class Team extends Component {
             </p>
           </div>
           <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
-            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Dhanvin}
                 alt={Dhanvin}
@@ -299,7 +302,7 @@ class Team extends Component {
                 className="rounded-lg pb-3 h-56 w-56"
               ></img>
               <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
-                <a href="mailto:kunsh.mehrotra@gmail.com">
+                <a href="mailto:anweshar040@gmail.com">
                   <FontAwesomeIcon icon={faEnvelope} className="" />
                 </a>
               </div>
@@ -376,6 +379,81 @@ class Team extends Component {
               He is arguably one of the most multi-faceted people to hang out
               with. His passions range from formula one to playing the guitar.
               He is driven, adaptive and mostly optimistic.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
+          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
+              <img
+                src={Siddhartha}
+                alt={Siddhartha}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+              <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
+                <a href="mailto:siddharthan2217@gmail.com">
+                  <FontAwesomeIcon icon={faEnvelope} className="" />
+                </a>
+              </div>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">Siddhartha</p>
+            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
+            <p className="w-56 break-words">
+              Disciplined but also Fun. Always has your back with last minute
+              revision. Remembers things constantly and tries to lift the heavy
+              list of Studies from his friends.
+            </p>
+          </div>
+          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
+              <img
+                src={Shreyans}
+                alt={Shreyans}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+              <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
+                <a href="mailto:shreyansroxx@gmail.com">
+                  <FontAwesomeIcon icon={faEnvelope} className="" />
+                </a>
+              </div>
+              <div className="absolute bottom-0 right-0 mr-3 mb-5 text-xl">
+                <a
+                  href="https://www.instagram.com/shreyans.sahay777/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="" />
+                </a>
+              </div>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">Shreyans</p>
+            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
+            <p className="w-56 break-words">
+              Fears nobody. Always ready to lift the mood whenever there is a
+              need for it, which is always. Studies for exams at the last minute
+              but still manages to ace them.
+            </p>
+          </div>
+          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
+              <img
+                src={Nikhilesh}
+                alt={Nikhilesh}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+              <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
+                <a href="mailto:nikhileshsuresh8@gmail.com">
+                  <FontAwesomeIcon icon={faEnvelope} className="" />
+                </a>
+              </div>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">Nikhilesh</p>
+            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
+            <p className="w-56 break-words">
+              Joyous and Meritorious. Loves challenges and also a social bird.
+              Can make friends with practically anyone. You can always count on
+              him to support all your crazy ideas.
             </p>
           </div>
         </div>
