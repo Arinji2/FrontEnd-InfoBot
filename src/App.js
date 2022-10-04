@@ -1,6 +1,7 @@
 import Nav from "../src/components/nav";
 import Home from "./pages/home";
 import Team from "./pages/team";
+import Register from "./pages/register";
 import Login from "./pages/login";
 import "./App.css";
 import React from "react";
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/team" element={<Team />}></Route>
+          <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
         </Routes>
       </Router>
