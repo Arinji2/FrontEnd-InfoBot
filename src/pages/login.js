@@ -59,6 +59,7 @@ function Login() {
               placeholder="Email..."
               onChange={(event) => {
                 setRegisterEmail(event.target.value);
+                console.log(user);
               }}
             ></input>
             <input

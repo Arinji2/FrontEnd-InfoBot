@@ -6,6 +6,7 @@ import {
 } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/fontawesome-free-solid";
+import { BrowserRouter as Router, Navigate } from "react-router-dom";
 
 function Register() {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -26,15 +27,19 @@ function Register() {
         registerEmail,
         registerPassword
       );
+
       setStatus("Loading...");
       setTimeout(() => {
-        setStatus("Welcome Back");
+        setStatus("Welcome");
+        window.location.replace("/");
       }, 2000);
     } catch (error) {
       if (error.code === "auth/invalid-email")
         setStatus("Invalid Email, Please try again!");
       else if (error.code === "auth/weak-password")
         setStatus("Weak Password, Please try again");
+      else if (error.code === "auth/email-already-in-use")
+        setStatus("Email Already In Use, Please try again!");
       else if (error.code === "auth/internal-error")
         setStatus("Internal Error, Please try again later!");
       else console.log(error.code);
