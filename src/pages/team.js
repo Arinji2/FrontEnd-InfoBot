@@ -15,6 +15,7 @@ import Vedant from "../assets/profiles/Vedant.png";
 import Siddhartha from "../assets/profiles/Siddhartha.png";
 import Shreyans from "../assets/profiles/Shreyans.png";
 import Nikhilesh from "../assets/profiles/Nikhilesh.png";
+import Tashvi from "../assets/profiles/Tashvi.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -454,6 +455,37 @@ class Team extends Component {
               Joyous and Meritorious. Loves challenges and also a social bird.
               Can make friends with practically anyone. You can always count on
               him to support all your crazy ideas.
+            </p>
+          </div>
+          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
+              <img
+                src={Tashvi}
+                alt={Tashvi}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+              <div className="absolute bottom-0 ml-3 mb-5 text-xl ">
+                <a href="mailto:tashvidoshi@gmail.com">
+                  <FontAwesomeIcon icon={faEnvelope} className="" />
+                </a>
+              </div>
+              <div className="absolute bottom-0 right-0 mr-3 mb-5 text-xl">
+                <a
+                  href="https://www.instagram.com/tashvidoshi/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="" />
+                </a>
+              </div>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">Tashvi</p>
+            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
+            <p className="w-56 break-words">
+              Introvert, is a bit shy but when you get to know her, is a total
+              sunshine. Annoying but fun and lives in her own fantasy. Obsessed
+              with fictional men and romance books. A Korean devotee.
             </p>
           </div>
         </div>
