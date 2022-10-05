@@ -39,6 +39,9 @@ class Nav extends Component {
     let element = document.getElementById("contact");
     element.scrollIntoView({ behavior: "smooth" });
   }
+  handleLogin() {
+    window.location.assign("/login");
+  }
   render() {
     return (
       <React.Fragment>
@@ -87,6 +90,14 @@ class Nav extends Component {
               <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950">
                 Meet the {""}
                 <span className="text-yellow-500">Team</span>
+              </p>
+            </Link>
+          </Router>
+
+          <Router>
+            <Link to="/login" onClick={this.handleLogin}>
+              <p className="p-2 rounded hover:border-b-2 border-transparent hover:border-blue-500 transition-all ease-in-out duration-300 bg-black-950 text-yellow-500">
+                Login
               </p>
             </Link>
           </Router>

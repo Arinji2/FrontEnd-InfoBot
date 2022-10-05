@@ -6,11 +6,11 @@ import {
 } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/fontawesome-free-solid";
-import { BrowserRouter as Router, Navigate } from "react-router-dom";
 
 function Register() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  // eslint-disable-next-line
   const [user, setUser] = useState({});
   const [status, setStatus] = useState("");
 
@@ -19,31 +19,25 @@ function Register() {
       setUser(currentUser);
     })
   );
-
-  const register = async () => {
-    try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-
-      setStatus("Loading...");
-      setTimeout(() => {
-        setStatus("Welcome");
-        window.location.replace("/");
-      }, 2000);
-    } catch (error) {
-      if (error.code === "auth/invalid-email")
-        setStatus("Invalid Email, Please try again!");
-      else if (error.code === "auth/weak-password")
-        setStatus("Weak Password, Please try again");
-      else if (error.code === "auth/email-already-in-use")
-        setStatus("Email Already In Use, Please try again!");
-      else if (error.code === "auth/internal-error")
-        setStatus("Internal Error, Please try again later!");
-      else console.log(error.code);
-    }
+  const register = () => {
+    createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+      .then(() => {
+        window.location.replace("/verify");
+      })
+      .catch((error) => {
+        if (error.code === "auth/invalid-email")
+          setStatus("Invalid Email, Please try again!");
+        else if (error.code === "auth/weak-password")
+          setStatus("Weak Password, Please try again");
+        else if (error.code === "auth/email-already-in-use")
+          setStatus("Email Already In Use, Please try again!");
+        else if (error.code === "auth/internal-error")
+          setStatus("Internal Error, Please try again later!");
+        else console.log(error.code);
+      });
+  };
+  const login = () => {
+    window.location.replace("/login");
   };
 
   return (
@@ -76,6 +70,12 @@ function Register() {
           <h1 className="pt-10 text-2xl text-center">
             Status: <span className="text-yellow-400">{status}</span>
           </h1>
+          <div
+            className="pt-10 text-2xl text-center text-yellow-400 hover:cursor-pointer"
+            onClick={login}
+          >
+            Login Instead
+          </div>
         </div>
       </div>
     </div>
