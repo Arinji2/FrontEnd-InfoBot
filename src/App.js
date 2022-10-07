@@ -5,6 +5,7 @@ import Register from "./pages/register";
 import Login from "./pages/login";
 import Verify from "./pages/verify";
 import Dashboard from "./pages/dashboard";
+import Pto from "./pages/pto";
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/verify" element={<Verify />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/pto" element={<Pto />}></Route>
         </Routes>
       </Router>
     </div>

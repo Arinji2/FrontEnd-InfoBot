@@ -3,6 +3,7 @@ import { auth } from "../firebase-config";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  updateProfile,
 } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/fontawesome-free-solid";
@@ -10,8 +11,9 @@ import { faCheckCircle } from "@fortawesome/fontawesome-free-solid";
 function Register() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const [userName, setUserName] = useState("");
   // eslint-disable-next-line
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState("");
   const [status, setStatus] = useState("");
 
   useEffect(() =>
@@ -22,6 +24,7 @@ function Register() {
   const register = () => {
     createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
       .then(() => {
+        updateProfile(auth.currentUser, { displayName: userName });
         window.location.replace("/verify");
       })
       .catch((error) => {
@@ -46,6 +49,13 @@ function Register() {
         <div className=" flex flex-col items-center">
           <h1 className="text-4xl text-yellow-400">Register User</h1>
           <div className="flex flex-row gap-5 pt-5">
+            <input
+              className="text-md hover:border-4 hover:border-yellow-400 focus:outline-none focus:border-4 focus:border-yellow-400 rounded-lg w-2/3 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer"
+              placeholder="Username..."
+              onChange={(event) => {
+                setUserName(event.target.value);
+              }}
+            ></input>
             <input
               className="text-md hover:border-4 hover:border-yellow-400 focus:outline-none focus:border-4 focus:border-yellow-400 rounded-lg w-2/3 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer"
               placeholder="Email..."

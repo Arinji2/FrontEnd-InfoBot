@@ -1,31 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { auth } from "../firebase-config";
-// eslint-disable-next-line
+
 import { onAuthStateChanged, sendEmailVerification } from "firebase/auth";
+import { doc, setDoc, getDoc } from "firebase/firestore";
+import { db } from "../firebase-config";
 
 function Verify() {
   const [isVerified, setIsVerified] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
-  useEffect(() =>
+  useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUserEmail(currentUser.email);
-    })
-  );
+    });
+    if (document.readyState === "complete") {
+      checkVerification();
+      setInterval(() => {
+        window.location.reload();
+      }, 10000);
+    }
+  });
 
   const checkVerification = () => {
     const user = auth.currentUser;
-    let tempVerify = user.emailVerified.toString();
-    let firstLetter = tempVerify.charAt(0);
-    tempVerify = tempVerify.slice(1);
-    firstLetter = firstLetter.toUpperCase();
-    let permVerify = firstLetter + tempVerify;
-    setIsVerified(permVerify);
+
     if (user.emailVerified !== true) verifyEmail();
     else {
-      window.location.reload();
       setIsVerified("True");
-      window.location.replace("/dashboard");
+      addToDb();
+      setTimeout(() => {
+        window.location.replace("/dashboard");
+      }, 5000);
     }
   };
 
@@ -34,6 +39,26 @@ function Verify() {
     setIsVerified(
       "False, A Verification Email has been sent to your mail address!"
     );
+  };
+
+  const addToDb = async () => {
+    console.log("DB");
+    const docRef = doc(db, "users", auth.currentUser.uid);
+    const docGet = await getDoc(docRef);
+    if (docGet.exists() === true) return;
+    setIsVerified("True, Adding to Database");
+    try {
+      await setDoc(doc(db, "users", auth.currentUser.uid), {
+        uid: auth.currentUser.uid,
+        email: auth.currentUser.email,
+        totalQuestions: 0,
+        CorrectQuestions: 0,
+        WrongQuestions: 0,
+      });
+      console.log("Added");
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
   };
   return (
     <div>
