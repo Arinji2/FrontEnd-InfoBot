@@ -51,7 +51,6 @@ function Verify() {
       await setDoc(doc(db, "users", auth.currentUser.uid), {
         uid: auth.currentUser.uid,
         email: auth.currentUser.email,
-        totalQuestions: 0,
         CorrectQuestions: 0,
         WrongQuestions: 0,
       });
