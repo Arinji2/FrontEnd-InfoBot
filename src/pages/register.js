@@ -48,25 +48,29 @@ function Register() {
       <div className="flex flex-col items-center pt-20 m-4">
         <div className=" flex flex-col items-center">
           <h1 className="text-4xl text-yellow-400">Register User</h1>
-          <div className="flex flex-row gap-5 pt-5">
+          <div className="flex flex-row flex-wrap justify-center gap-5 pt-5 items-baseline">
             <input
-              className="text-md hover:border-4 hover:border-yellow-400 focus:outline-none focus:border-4 focus:border-yellow-400 rounded-lg w-2/3 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer"
+              className="text-md hover:shadow-md  hover:shadow-yellow-400 focus:outline-none  focus:shadow-yellow-400 rounded-lg w-2/5 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer scale-90 hover:scale-100 focus:scale-100 align-top"
               placeholder="Username..."
               onChange={(event) => {
+                event.target.value = event.target.value.trim();
                 setUserName(event.target.value);
               }}
             ></input>
             <input
-              className="text-md hover:border-4 hover:border-yellow-400 focus:outline-none focus:border-4 focus:border-yellow-400 rounded-lg w-2/3 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer"
+              className="text-md hover:shadow-md  hover:shadow-yellow-400 focus:outline-none  focus:shadow-yellow-400 rounded-lg w-2/5 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer scale-90 hover:scale-100 focus:scale-100 align-top"
               placeholder="Email..."
               onChange={(event) => {
+                event.target.value = event.target.value.trim().toLowerCase();
                 setRegisterEmail(event.target.value);
               }}
             ></input>
             <input
-              className="text-md hover:border-4 hover:border-yellow-400 focus:outline-none focus:border-4 focus:border-yellow-400 rounded-lg w-2/3 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer"
+              className="text-md hover:shadow-md  hover:shadow-yellow-400 focus:outline-none  focus:shadow-yellow-400 rounded-lg w-2/5 text-black-950 transition-all ease-in-out duration-300 p-3 hover:cursor-pointer scale-90 hover:scale-100 focus:scale-100 align-top"
               placeholder="Password..."
               onChange={(event) => {
+                event.target.value = event.target.value.trim().toLowerCase();
+
                 setRegisterPassword(event.target.value);
               }}
             ></input>

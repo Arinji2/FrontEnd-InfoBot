@@ -12,8 +12,10 @@ function Q1() {
   const [RedirectButton, setRedirectButton] = useState("");
   useEffect(() => {
     onAuthStateChanged(auth, () => {
-      getDatabase();
-      setIsLoaded(true);
+      if (auth !== null) {
+        getDatabase();
+        setIsLoaded(true);
+      }
     });
   });
   const getDatabase = async () => {
