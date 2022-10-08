@@ -3,6 +3,7 @@ import { auth } from "../../firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import loopRoutes from "../pto/chapters/loops/loopRouter";
 function Specific() {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -16,7 +17,15 @@ function Specific() {
         Specific Tests
       </h1>
       <div className="pt-20 flex flex-row flex-wrap justify-evenly ">
-        <div className="text-center bg-black-950 scale-90 hover:scale-100 p-3 rounded-lg transition-all ease-in-out duration-300 hover:cursor-pointer">
+        <div
+          className="text-center bg-black-950 scale-90 hover:scale-100 p-3 rounded-lg transition-all ease-in-out duration-300 hover:cursor-pointer"
+          onClick={() => {
+            window.location.assign(
+              loopRoutes[Math.floor(Math.random() * loopRoutes.length)].props
+                .path
+            );
+          }}
+        >
           <h2 className="text-3xl text-yellow-400">Loops</h2>
           <p className="text-2xl">Practice Loop based Pto's</p>
           <p className="mt-5 border-2 border-green-500 p-2 rounded-lg bg-green-500 hover:border-green-600 hover:bg-green-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200">

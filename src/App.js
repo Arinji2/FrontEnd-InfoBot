@@ -7,6 +7,7 @@ import Verify from "./pages/verify";
 import Dashboard from "./pages/dashboard";
 import PtoSelection from "./pages/pto/ptoSelection";
 import Specific from "./pages/pto/specific";
+import loop from "./pages/pto/chapters/loops/loopRouter";
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/pto" element={<PtoSelection />}></Route>
           <Route path="/specificTest" element={<Specific />}></Route>
+          {loop}
         </Routes>
       </Router>
     </div>
