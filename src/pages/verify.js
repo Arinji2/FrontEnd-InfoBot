@@ -16,9 +16,6 @@ function Verify() {
     });
     if (document.readyState === "complete") {
       checkVerification();
-      setInterval(() => {
-        window.location.reload();
-      }, 10000);
     }
   });
 
