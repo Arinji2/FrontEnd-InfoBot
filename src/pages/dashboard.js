@@ -11,16 +11,19 @@ function Dashboard() {
         window.location.replace("/verify");
     });
   });
-  const handlePto = () => {
-    window.location.assign("/pto");
-  };
+  const handlePto = () => {};
   return (
     <div>
       <h1 className="text-center text-4xl text-yellow-400 pt-20 pb-10">
         Dashboard
       </h1>
       <div className="flex flex-col md:flex-row justify-center items-center md:gap-5">
-        <div className=" flex flex-col justify-center items-center group pb-20 md:pb-0">
+        <div
+          className=" flex flex-col justify-center items-center group pb-20 md:pb-0"
+          onClick={() => {
+            window.location.assign("/account");
+          }}
+        >
           <img
             src={Account}
             alt={Account}
@@ -32,7 +35,9 @@ function Dashboard() {
         </div>
         <div
           className=" flex flex-col justify-center items-center group "
-          onClick={handlePto}
+          onClick={() => {
+            window.location.assign("/pto");
+          }}
         >
           <img
             src={Coding}

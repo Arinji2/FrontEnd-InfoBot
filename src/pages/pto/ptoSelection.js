@@ -3,9 +3,13 @@ import { auth, db } from "../../firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRefresh } from "@fortawesome/free-solid-svg-icons";
+import {
+  faRefresh,
+  faArrowAltCircleLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import Random from "../../assets/random.svg";
 import Specific from "../../assets/specific.svg";
+import router from "../pto/chapters/all/allRouter";
 function PtoSelection() {
   const [name, setName] = useState("");
   const [Correct, setCorrect] = useState(0);
@@ -14,8 +18,6 @@ function PtoSelection() {
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
-      if (auth.currentUser.emailVerified !== true)
-        window.location.replace("/verify");
       setName(currentUser.displayName);
       getDatabase();
       calcTotal();
@@ -77,18 +79,34 @@ function PtoSelection() {
             <img src={Specific} alt={Specific} className="pb-2"></img>
             <h2 className="text-3xl text-yellow-400 md:p-4">Chapter Test</h2>
             <p className="text-lg">
-              Take a test of 10 Board PTO Questions of a <br></br> Specific
-              Chapter
+              Take a test of Board PTO Questions of a <br></br> Specific Chapter
             </p>
           </div>
-          <div className=" md:w-1/5 bg-black-950 p-3 rounded-lg scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer">
+          <div
+            className=" md:w-1/5 bg-black-950 p-3 rounded-lg scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+            onClick={() => {
+              window.location.assign(
+                router[Math.floor(Math.random() * router.length)].props.path
+              );
+            }}
+          >
             <img src={Random} alt={Random} className="pb-2"></img>
             <h2 className="text-3xl text-yellow-400 md:p-4">Mixed Test</h2>
             <p className="text-lg">
-              Take a test of 10 Board PTO Questions of all Chapters
+              Take a test of Board PTO Questions of all Chapters
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col items-center">
+        <p
+          className="mt-10 border-2 text-2xl border-yellow-500 p-2 rounded-lg bg-yellow-500 hover:border-yellow-600 hover:bg-yellow-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200 mb-5"
+          onClick={() => {
+            window.location.assign("/dashboard");
+          }}
+        >
+          Back to Dashboard <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+        </p>
       </div>
     </div>
   );

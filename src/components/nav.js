@@ -47,15 +47,22 @@ class Nav extends Component {
       <React.Fragment>
         <div id="top"></div>
         <div className="flex flex-row rounded text-3xl pt-5 justify-between sticky top-0 z-50 bg-black-950 pb-2">
-          <p className="pl-6">
-            InfoBot<span className="text-yellow-500">.</span>
-            <span className="absolute right-3 md:invisible">
+          <p className="pl-6 hover:cursor-pointer">
+            <p
+              onClick={() => {
+                window.location.assign("/");
+              }}
+            >
+              InfoBot<span className="text-yellow-500">.</span>
+            </p>
+
+            <p className="absolute right-3 top-5 md:invisible">
               <FontAwesomeIcon
                 icon={faBars}
                 onClick={this.handleBurgerClick}
                 id="burger-button"
               ></FontAwesomeIcon>
-            </span>
+            </p>
           </p>
           <p className="pr-24"></p>
         </div>
