@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyBidIYxmER28Jqw4ztc_OEydKbpFN88oBk",
-  authDomain: "auth-2216a.firebaseapp.com",
+  authDomain: "auth.infobot.uk",
   projectId: "auth-2216a",
   storageBucket: "auth-2216a.appspot.com",
   messagingSenderId: "83891577277",
