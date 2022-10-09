@@ -38,7 +38,7 @@ function Q1() {
       setisCorrect("Correct Answer!");
       setSolution("Redirecting in 2 Seconds..");
       setTimeout(() => {
-        window.location.replace("/specificTest");
+        window.history.back();
       }, 2000);
     } catch (e) {
       window.location.reload();
