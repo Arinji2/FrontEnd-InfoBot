@@ -30,7 +30,7 @@ class Team extends Component {
           Meet the <span className="text-yellow-500">Team</span>
         </h1>
         <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Arinji}
@@ -63,7 +63,7 @@ class Team extends Component {
               Hindi and has a weird American Accent. Caffeinated 24/7.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Vedika}
@@ -99,7 +99,7 @@ class Team extends Component {
             </p>
           </div>
 
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Nilay}
@@ -132,7 +132,7 @@ class Team extends Component {
               and does his best to help others against it.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Saesha}
@@ -167,7 +167,7 @@ class Team extends Component {
           </div>
         </div>
         <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Vedant}
@@ -189,7 +189,7 @@ class Team extends Component {
               coming.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Dhanvin}
@@ -210,7 +210,7 @@ class Team extends Component {
               React. Experienced in Java.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Kunsh}
@@ -241,7 +241,7 @@ class Team extends Component {
               new things. Loves to play games and work out.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Neel}
@@ -274,7 +274,7 @@ class Team extends Component {
           </div>
         </div>
         <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Shreshth}
@@ -295,7 +295,7 @@ class Team extends Component {
               rather spend an hour writing a title than write the project.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Anwesha}
@@ -327,7 +327,7 @@ class Team extends Component {
               the end.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Yuvraj}
@@ -361,7 +361,7 @@ class Team extends Component {
               Always interested in big projects. Friendly, humble and sweet.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Shreeniket}
@@ -384,7 +384,7 @@ class Team extends Component {
           </div>
         </div>
         <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
                 src={Siddhartha}
@@ -405,7 +405,7 @@ class Team extends Component {
               list of Studies from his friends.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Shreyans}
@@ -436,7 +436,7 @@ class Team extends Component {
               but still manages to ace them.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Nikhilesh}
@@ -457,7 +457,7 @@ class Team extends Component {
               him to support all your crazy ideas.
             </p>
           </div>
-          <div className="p-3 pb-5 transition ease-in-out rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer bg-black-950 text-center bg-cover bg-no-repeat">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-white ">
               <img
                 src={Tashvi}
