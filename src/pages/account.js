@@ -15,6 +15,7 @@ function Account() {
   const [Total, setTotal] = useState(0);
   onAuthStateChanged(auth, (currentUser) => {
     getDatabase();
+    calcTotal();
   });
   const getDatabase = async () => {
     const docRef = doc(db, "users", auth.currentUser.uid);
@@ -29,6 +30,10 @@ function Account() {
     auth.signOut().then(() => {
       window.location.assign("/login");
     });
+  };
+    const calcTotal = () => {
+    setTotal(Math.round((Correct / (Correct + Wrong)) * 100));
+    if (Correct === 0 && Wrong === 0) setTotal(0);
   };
   return (
     <div>
