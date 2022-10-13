@@ -9,6 +9,8 @@ import PtoSelection from "./pages/pto/ptoSelection";
 import Specific from "./pages/pto/specific";
 import Account from "./pages/account";
 import loop from "./pages/pto/chapters/loops/loopRouter";
+import string from "./pages/pto/chapters/string/stringRouter";
+import array from "./pages/pto/chapters/arrays/arrayRouter";
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -29,6 +31,8 @@ function App() {
           <Route path="/specificTest" element={<Specific />}></Route>
 
           {loop}
+          {string}
+          {array}
         </Routes>
       </Router>
     </div>
