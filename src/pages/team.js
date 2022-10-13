@@ -262,7 +262,7 @@ class Team extends Component {
               </div>
             </div>
             <p className="p-3 border-t-2 border-white text-2xl">Kunsh</p>
-            <p className="pb-3 text-yellow-500 text-xl">Verifier</p>
+            <p className="pb-3 text-yellow-500 text-xl">Head Verifier</p>
             <p className="w-56 break-words">
               An introvert and hilarious dude who can sometimes be creative.
               Co-operative to work with others and born ready to learn and try
