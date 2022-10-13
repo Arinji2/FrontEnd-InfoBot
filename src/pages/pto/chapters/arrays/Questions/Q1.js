@@ -91,7 +91,7 @@ function Q1() {
         <div className="flex flex-row flex-wrap justify-evenly items-baseline">
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-            onClick={correct}
+            onClick={wrong}
           >
             <p>{"false"}</p>
             <p>{"che"}</p>
@@ -105,7 +105,7 @@ function Q1() {
           </div>
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-            onClick={wrong}
+            onClick={correct}
           >
             <p>{"false"}</p>
             <p>{"Che"}</p>
