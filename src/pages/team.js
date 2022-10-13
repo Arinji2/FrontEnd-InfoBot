@@ -347,7 +347,7 @@ class Team extends Component {
               </div>
             </div>
             <p className="p-3 border-t-2 border-white text-2xl">Anwesha</p>
-            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
+            <p className="pb-3 text-yellow-500 text-xl">Head Writer</p>
             <p className="w-56 break-words">
               Lazy but also Energetic when the time presents itself. Loves
               Coffee and could not survive without it. Loves to Gossip and is
