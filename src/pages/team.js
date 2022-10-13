@@ -403,7 +403,7 @@ class Team extends Component {
               </div>
             </div>
             <p className="p-3 border-t-2 border-white text-2xl">Shreeniket</p>
-            <p className="pb-3 text-yellow-500 text-xl">Verifier</p>
+            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
             <p className="w-56 break-words text-md">
               He is arguably one of the most multi-faceted people to hang out
               with. His passions range from formula one to playing the guitar.
