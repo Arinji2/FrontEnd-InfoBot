@@ -14,8 +14,10 @@ function Account() {
   const [Wrong, setWrong] = useState(0);
   const [Total, setTotal] = useState(0);
   onAuthStateChanged(auth, (currentUser) => {
-    getDatabase();
-    calcTotal();
+    if (auth != null) {
+      getDatabase();
+      console.log("Run");
+    }
   });
   const getDatabase = async () => {
     const docRef = doc(db, "users", auth.currentUser.uid);
@@ -24,14 +26,14 @@ function Account() {
     setName(auth.currentUser.displayName);
     setCorrect(docGet.data().CorrectQuestions);
     setWrong(docGet.data().WrongQuestions);
-    setTotal(Wrong + Correct);
+    calcTotal();
   };
   const signOut = async () => {
     auth.signOut().then(() => {
       window.location.assign("/login");
     });
   };
-    const calcTotal = () => {
+  const calcTotal = () => {
     setTotal(Math.round((Correct / (Correct + Wrong)) * 100));
     if (Correct === 0 && Wrong === 0) setTotal(0);
   };
