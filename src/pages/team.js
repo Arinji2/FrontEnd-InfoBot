@@ -16,6 +16,8 @@ import Siddhartha from "../assets/profiles/Siddhartha.png";
 import Shreyans from "../assets/profiles/Shreyans.png";
 import Nikhilesh from "../assets/profiles/Nikhilesh.png";
 import Tashvi from "../assets/profiles/Tashvi.png";
+import Aditya from "../assets/profiles/Aditya.png";
+import Aryan from "../assets/profiles/Aryan.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -164,6 +166,32 @@ class Team extends Component {
               never lets anyone feel left out. Hates holding grudges and is
               loved by everyone.
             </p>
+          </div>
+        </div>
+        <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
+              <img
+                src={Aryan}
+                alt={Aryan}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">Aryan Pandey</p>
+            <p className="pb-3 text-yellow-500 text-xl">Systems Officer</p>
+          </div>
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
+              <img
+                src={Aditya}
+                alt={Aditya}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">
+              Aditya Mathalkar
+            </p>
+            <p className="pb-3 text-yellow-500 text-xl">Investor</p>
           </div>
         </div>
         <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
