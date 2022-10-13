@@ -57,9 +57,7 @@ function Q3() {
         });
         setSolutionColor("text-red-400 text-center pt-5");
         setisCorrect("Incorrect Answer!");
-        setSolution(
-          ".replace is a String function which will only replace characters, not change capital state etc. The compare to will return a negative value if the second number is greater than the first number"
-        );
+        setSolution("indexOf returns a integer value. 2+10 = 12");
         setRedirectButton("Click to Redirect");
       } catch (e) {
         window.location.reload();
@@ -75,7 +73,7 @@ function Q3() {
         <h2 className="self-center pb-5">Question</h2>
 
         <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white">
-          <p>{"public class program"}</p>
+          <p>{" public class program"}</p>
 
           <p>{"{"}</p>
 
@@ -83,9 +81,17 @@ function Q3() {
 
           <p>{"{"}</p>
 
-          <p>{"System.out.println('ACHIEVEMENT'.replace('E','A'));"}</p>
+          <p>
+            {'System.out.println("MISSISSIPPI".indexOf(' +
+              "'S'" +
+              ') + "MISSISSIPPI".lastIndexOf(' +
+              "'I'" +
+              "));"}
+          </p>
 
-          <p>{'System.out.println("DEDICATE".compareTo("DEVOTE"));'}</p>
+          <p>{"}"}</p>
+
+          <p>{"}"}</p>
         </div>
       </div>
       {/* Paste the Options here, give the Correct Option onClick={correct} and
@@ -95,27 +101,21 @@ function Q3() {
         <div className="flex flex-row flex-wrap justify-evenly items-baseline">
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+            onClick={wrong}
+          >
+            <p>{"14"}</p>
+          </div>
+          <div
+            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+            onClick={wrong}
+          >
+            <p>{"11"}</p>
+          </div>
+          <div
+            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={correct}
           >
-            <p>{"ACHIAVAMANT"}</p>
-
-            <p>{"-18"}</p>
-          </div>
-          <div
-            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-            onClick={wrong}
-          >
-            <p>{"achiavamant"}</p>
-
-            <p>{"-20"}</p>
-          </div>
-          <div
-            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-            onClick={wrong}
-          >
-            <p>{"ACHIAVAMANT"}</p>
-
-            <p>{"18"}</p>
+            <p>{"12"}</p>
           </div>
         </div>
         <p className={SolutionColor}>{isCorrect}</p>

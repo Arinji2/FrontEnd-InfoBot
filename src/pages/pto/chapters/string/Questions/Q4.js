@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { auth, db } from "../../../../../firebase-config";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-function Q3() {
+function Q4() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [Correct, setCorrect] = useState(0);
   const [Wrong, setWrong] = useState(0);
@@ -58,7 +58,7 @@ function Q3() {
         setSolutionColor("text-red-400 text-center pt-5");
         setisCorrect("Incorrect Answer!");
         setSolution(
-          ".replace is a String function which will only replace characters, not change capital state etc. The compare to will return a negative value if the second number is greater than the first number"
+          "Variable x is assigned a value of character y so the first println prints y. Variable y is assigned a value of character z so the second println prints z. After that variable x is assigned the value of variable y which is the character z so last println prints z."
         );
         setRedirectButton("Click to Redirect");
       } catch (e) {
@@ -75,17 +75,19 @@ function Q3() {
         <h2 className="self-center pb-5">Question</h2>
 
         <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white">
-          <p>{"public class program"}</p>
+          <p>{"char x, y;"}</p>
 
-          <p>{"{"}</p>
+          <p>{"x = 'y';"}</p>
 
-          <p>{"static void main()"}</p>
+          <p>{"System.out.println(x);"}</p>
 
-          <p>{"{"}</p>
+          <p>{"y = 'z';"}</p>
 
-          <p>{"System.out.println('ACHIEVEMENT'.replace('E','A'));"}</p>
+          <p>{"System.out.println(y);"}</p>
 
-          <p>{'System.out.println("DEDICATE".compareTo("DEVOTE"));'}</p>
+          <p>{"x = y;"}</p>
+
+          <p>{"System.out.println(x);"}</p>
         </div>
       </div>
       {/* Paste the Options here, give the Correct Option onClick={correct} and
@@ -95,27 +97,33 @@ function Q3() {
         <div className="flex flex-row flex-wrap justify-evenly items-baseline">
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+            onClick={wrong}
+          >
+            <p>{"y"}</p>
+
+            <p>{"y"}</p>
+
+            <p>{"y"}</p>
+          </div>
+          <div
+            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={correct}
           >
-            <p>{"ACHIAVAMANT"}</p>
+            <p>{"y"}</p>
 
-            <p>{"-18"}</p>
+            <p>{"y"}</p>
+
+            <p>{"z"}</p>
           </div>
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={wrong}
           >
-            <p>{"achiavamant"}</p>
+            <p>{"y"}</p>
 
-            <p>{"-20"}</p>
-          </div>
-          <div
-            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-            onClick={wrong}
-          >
-            <p>{"ACHIAVAMANT"}</p>
+            <p>{"z"}</p>
 
-            <p>{"18"}</p>
+            <p>{"z"}</p>
           </div>
         </div>
         <p className={SolutionColor}>{isCorrect}</p>
@@ -133,4 +141,4 @@ function Q3() {
   );
 }
 
-export default Q3;
+export default Q4;
