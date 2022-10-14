@@ -38,7 +38,7 @@ function Q1() {
       setisCorrect("Correct Answer!");
       setSolution("Redirecting in 2 Seconds..");
       setTimeout(() => {
-        window.location.replace("/specificTest");
+        window.history.back();
       }, 2000);
     } catch (e) {
       window.location.reload();
@@ -58,7 +58,7 @@ function Q1() {
         setSolutionColor("text-red-400 text-center pt-5");
         setisCorrect("Incorrect Answer!");
         setSolution(
-          "In the first print line Statement, the length of Delhi is not greater than Lucknow. In the Second one, substring will not make lowercase letters capital "
+          "J loop runs till 2, after which it breaks since the Condition is less than 3. The I loop runs once and then breaks"
         );
         setRedirectButton("Click to Redirect");
       } catch (e) {
@@ -75,13 +75,17 @@ function Q1() {
       <div className=" flex flex-col text-2xl text-yellow-500 m-10 items-center">
         <h2 className="self-center pb-5">Question</h2>
         <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white">
-          <p>
-            {
-              'String arr[] = {"Delhi", "Chennai", "Mumbai", "Lucknow", "Jaipur"};'
-            }
-          </p>
-          <p>{"System.out.println(arr[0].length() > arr[3].length());"}</p>
-          <p>{"System.out.println(arr[1].substring(0,3));"}</p>
+          <p>{"int i, j;"}</p>
+          <p>{"for(i=0; i<3; i++);"}</p>
+          <p>{"{"}</p>
+          <p>{"for(j=0; j<3; j++);"}</p>
+          <p>{"{"}</p>
+          <p>{"System.out.println(j);"}</p>
+          <p>{"continue;"}</p>
+          <p>{"}"}</p>
+          <p>{'System.out.println("Best of Luck");'}</p>
+          <p>{"break;"}</p>
+          <p>{"}"}</p>
         </div>
       </div>
       {/* Paste the Options here, give the Correct Option onClick={correct} and
@@ -91,24 +95,27 @@ function Q1() {
         <div className="flex flex-row flex-wrap justify-evenly items-baseline">
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-            onClick={wrong}
-          >
-            <p>{"false"}</p>
-            <p>{"che"}</p>
-          </div>
-          <div
-            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-            onClick={wrong}
-          >
-            <p>{"true"}</p>
-            <p>{"che"}</p>
-          </div>
-          <div
-            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={correct}
           >
-            <p>{"false"}</p>
-            <p>{"Che"}</p>
+            <p>{"0"}</p>
+            <p>{"1"}</p>
+            <p>{"2"}</p>
+            <p>{"Best of Luck"}</p>
+          </div>
+          <div
+            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+            onClick={wrong}
+          >
+            <p>{"0"}</p>
+            <p>{"1"}</p>
+            <p>{"2"}</p>
+            <p>{"3"}</p>
+            <p>{"Best of Luck"}</p>
+          </div>
+          <div className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer">
+            <p>{"0"}</p>
+            <p>{"1"}</p>
+            <p>{"Best of Luck"}</p>
           </div>
         </div>
         <p className={SolutionColor}>{isCorrect}</p>

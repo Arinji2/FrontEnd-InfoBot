@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { auth, db } from "../../../../../firebase-config";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-function Q1() {
+function Q3() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [Correct, setCorrect] = useState(0);
   const [Wrong, setWrong] = useState(0);
@@ -38,7 +38,7 @@ function Q1() {
       setisCorrect("Correct Answer!");
       setSolution("Redirecting in 2 Seconds..");
       setTimeout(() => {
-        window.location.replace("/specificTest");
+        window.history.back();
       }, 2000);
     } catch (e) {
       window.location.reload();
@@ -58,7 +58,7 @@ function Q1() {
         setSolutionColor("text-red-400 text-center pt-5");
         setisCorrect("Incorrect Answer!");
         setSolution(
-          "J loop runs till 2, after which it breaks since the Condition is less than 3. The I loop runs once and then breaks"
+          "Concat does not add any new space if there is not any in the text. Capital Letters remain Capital and vice versa"
         );
         setRedirectButton("Click to Redirect");
       } catch (e) {
@@ -69,22 +69,40 @@ function Q1() {
   //Paste the Question Html
   return (
     <div className="pt-20">
-      <h1 className="text-center text-4xl">
-        Question <span className="text-yellow-400">1</span>
-      </h1>
+      <h1 className="text-center text-4xl">PTO Practice</h1>
+
       <div className=" flex flex-col text-2xl text-yellow-500 m-10 items-center">
         <h2 className="self-center pb-5">Question</h2>
+
         <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white">
-          <p>{"int i, j;"}</p>
-          <p>{"for(i=0; i<3; i++);"}</p>
+          <p>{" public class program"}</p>
+
           <p>{"{"}</p>
-          <p>{"for(j=0; j<3; j++);"}</p>
+
+          <p>{"static void main()"}</p>
+
           <p>{"{"}</p>
-          <p>{"System.out.println(j);"}</p>
-          <p>{"continue;"}</p>
+
+          <p>{'String s1 = "Transition";'}</p>
+
+          <p>{'String s2 = "Mock Test";'}</p>
+
+          <p>
+            {"System.out.println(s1.substring(0,3).concat(s2.substring(5)));"}
+          </p>
+
+          <p>{"System.out.println((int) s2.charAt(6));"}</p>
+
+          <p>{"System.out.println(s1.replace('T' , 'F'));"}</p>
+
+          <p>
+            {
+              "System.out.println(s1.charAt(s1.indexOf('r')) + s2.indexOf('T'));"
+            }
+          </p>
+
           <p>{"}"}</p>
-          <p>{'System.out.println("Best of Luck");'}</p>
-          <p>{"break;"}</p>
+
           <p>{"}"}</p>
         </div>
       </div>
@@ -95,27 +113,39 @@ function Q1() {
         <div className="flex flex-row flex-wrap justify-evenly items-baseline">
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+            onClick={wrong}
+          >
+            <p>{"Tra Test"}</p>
+
+            <p>{"101"}</p>
+
+            <p>{"Fransition"}</p>
+
+            <p>{"119"}</p>
+          </div>
+          <div
+            className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={correct}
           >
-            <p>{"0"}</p>
-            <p>{"1"}</p>
-            <p>{"2"}</p>
-            <p>{"Best of Luck"}</p>
+            <p>{"TraTest"}</p>
+
+            <p>{"101"}</p>
+
+            <p>{"Fransition"}</p>
+
+            <p>{"119"}</p>
           </div>
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={wrong}
           >
-            <p>{"0"}</p>
-            <p>{"1"}</p>
-            <p>{"2"}</p>
-            <p>{"3"}</p>
-            <p>{"Best of Luck"}</p>
-          </div>
-          <div className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer">
-            <p>{"0"}</p>
-            <p>{"1"}</p>
-            <p>{"Best of Luck"}</p>
+            <p>{"Tratest"}</p>
+
+            <p>{"101"}</p>
+
+            <p>{"Fransition"}</p>
+
+            <p>{"119"}</p>
           </div>
         </div>
         <p className={SolutionColor}>{isCorrect}</p>
@@ -133,4 +163,4 @@ function Q1() {
   );
 }
 
-export default Q1;
+export default Q3;

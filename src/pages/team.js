@@ -16,6 +16,8 @@ import Siddhartha from "../assets/profiles/Siddhartha.png";
 import Shreyans from "../assets/profiles/Shreyans.png";
 import Nikhilesh from "../assets/profiles/Nikhilesh.png";
 import Tashvi from "../assets/profiles/Tashvi.png";
+import Aditya from "../assets/profiles/Aditya.png";
+import Aryan from "../assets/profiles/Aryan.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -170,6 +172,32 @@ class Team extends Component {
           <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
             <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
               <img
+                src={Aryan}
+                alt={Aryan}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">Aryan Pandey</p>
+            <p className="pb-3 text-yellow-500 text-xl">Systems Officer</p>
+          </div>
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
+              <img
+                src={Aditya}
+                alt={Aditya}
+                className="rounded-lg pb-3 h-56 w-56"
+              ></img>
+            </div>
+            <p className="p-3 border-t-2 border-white text-2xl">
+              Aditya Mathalkar
+            </p>
+            <p className="pb-3 text-yellow-500 text-xl">Investor</p>
+          </div>
+        </div>
+        <div className="flex items-center md:justify-around pt-5 pb-5 flex-col md:flex-row space-y-8 md:space-y-0">
+          <div className="p-3 pb-5 transition-all ease-in-out duration-500 rounded-lg hover:shadow-md hover:shadow-yellow-500 hover:cursor-pointer md:shadow-none shadow-md shadow-white bg-black-950 text-center bg-cover bg-no-repeat">
+            <div className="relative text-transparent transition ease-in-out duration-500 hover:text-black-950 ">
+              <img
                 src={Vedant}
                 alt={Vedant}
                 className="rounded-lg pb-3 h-56 w-56"
@@ -234,7 +262,7 @@ class Team extends Component {
               </div>
             </div>
             <p className="p-3 border-t-2 border-white text-2xl">Kunsh</p>
-            <p className="pb-3 text-yellow-500 text-xl">Verifier</p>
+            <p className="pb-3 text-yellow-500 text-xl">Head Verifier</p>
             <p className="w-56 break-words">
               An introvert and hilarious dude who can sometimes be creative.
               Co-operative to work with others and born ready to learn and try
@@ -319,7 +347,7 @@ class Team extends Component {
               </div>
             </div>
             <p className="p-3 border-t-2 border-white text-2xl">Anwesha</p>
-            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
+            <p className="pb-3 text-yellow-500 text-xl">Head Writer</p>
             <p className="w-56 break-words">
               Lazy but also Energetic when the time presents itself. Loves
               Coffee and could not survive without it. Loves to Gossip and is
@@ -375,7 +403,7 @@ class Team extends Component {
               </div>
             </div>
             <p className="p-3 border-t-2 border-white text-2xl">Shreeniket</p>
-            <p className="pb-3 text-yellow-500 text-xl">Verifier</p>
+            <p className="pb-3 text-yellow-500 text-xl">Writer</p>
             <p className="w-56 break-words text-md">
               He is arguably one of the most multi-faceted people to hang out
               with. His passions range from formula one to playing the guitar.

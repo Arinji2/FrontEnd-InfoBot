@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { auth, db } from "../../../../../firebase-config";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-function Q1() {
+function Q4() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [Correct, setCorrect] = useState(0);
   const [Wrong, setWrong] = useState(0);
@@ -38,7 +38,7 @@ function Q1() {
       setisCorrect("Correct Answer!");
       setSolution("Redirecting in 2 Seconds..");
       setTimeout(() => {
-        window.location.replace("/specificTest");
+        window.history.back();
       }, 2000);
     } catch (e) {
       window.location.reload();
@@ -58,7 +58,7 @@ function Q1() {
         setSolutionColor("text-red-400 text-center pt-5");
         setisCorrect("Incorrect Answer!");
         setSolution(
-          "In the first print line Statement, the length of Delhi is not greater than Lucknow. In the Second one, substring will not make lowercase letters capital "
+          "Variable x is assigned a value of character y so the first println prints y. Variable y is assigned a value of character z so the second println prints z. After that variable x is assigned the value of variable y which is the character z so last println prints z."
         );
         setRedirectButton("Click to Redirect");
       } catch (e) {
@@ -69,19 +69,25 @@ function Q1() {
   //Paste the Question Html
   return (
     <div className="pt-20">
-      <h1 className="text-center text-4xl">
-        Question <span className="text-yellow-400">1</span>
-      </h1>
+      <h1 className="text-center text-4xl">PTO Practice</h1>
+
       <div className=" flex flex-col text-2xl text-yellow-500 m-10 items-center">
         <h2 className="self-center pb-5">Question</h2>
+
         <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white">
-          <p>
-            {
-              'String arr[] = {"Delhi", "Chennai", "Mumbai", "Lucknow", "Jaipur"};'
-            }
-          </p>
-          <p>{"System.out.println(arr[0].length() > arr[3].length());"}</p>
-          <p>{"System.out.println(arr[1].substring(0,3));"}</p>
+          <p>{"char x, y;"}</p>
+
+          <p>{"x = 'y';"}</p>
+
+          <p>{"System.out.println(x);"}</p>
+
+          <p>{"y = 'z';"}</p>
+
+          <p>{"System.out.println(y);"}</p>
+
+          <p>{"x = y;"}</p>
+
+          <p>{"System.out.println(x);"}</p>
         </div>
       </div>
       {/* Paste the Options here, give the Correct Option onClick={correct} and
@@ -93,22 +99,31 @@ function Q1() {
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={wrong}
           >
-            <p>{"false"}</p>
-            <p>{"che"}</p>
+            <p>{"y"}</p>
+
+            <p>{"y"}</p>
+
+            <p>{"y"}</p>
           </div>
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={wrong}
           >
-            <p>{"true"}</p>
-            <p>{"che"}</p>
+            <p>{"y"}</p>
+
+            <p>{"y"}</p>
+
+            <p>{"z"}</p>
           </div>
           <div
             className="text-left bg-black-950 md:bg-black-950 md:shadow-none shadow-md shadow-white p-5 rounded-lg text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
             onClick={correct}
           >
-            <p>{"false"}</p>
-            <p>{"Che"}</p>
+            <p>{"y"}</p>
+
+            <p>{"z"}</p>
+
+            <p>{"z"}</p>
           </div>
         </div>
         <p className={SolutionColor}>{isCorrect}</p>
@@ -126,4 +141,4 @@ function Q1() {
   );
 }
 
-export default Q1;
+export default Q4;
