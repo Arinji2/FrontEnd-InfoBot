@@ -3,7 +3,6 @@ import Home from "./pages/home";
 import Team from "./pages/team";
 
 import Login from "./pages/login";
-import Verify from "./pages/verify";
 import Dashboard from "./pages/dashboard";
 import PtoSelection from "./pages/pto/ptoSelection";
 import Specific from "./pages/pto/specific";
