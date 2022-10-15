@@ -13,7 +13,7 @@ function Account() {
   const [Correct, setCorrect] = useState(0);
   const [Wrong, setWrong] = useState(0);
   const [Total, setTotal] = useState(0);
-  onAuthStateChanged(auth, (currentUser) => {
+  const unsubscribe = onAuthStateChanged(auth, () => {
     if (auth != null) {
       getDatabase();
     } else window.location.assign("/login");
@@ -26,6 +26,7 @@ function Account() {
     setCorrect(docGet.data().CorrectQuestions);
     setWrong(docGet.data().WrongQuestions);
     calcTotal();
+    unsubscribe();
   };
   const signOut = async () => {
     auth.signOut().then(() => {
