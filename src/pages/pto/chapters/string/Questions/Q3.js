@@ -69,10 +69,10 @@ function Q3() {
     <div className="pt-20">
       <h1 className="text-center text-4xl">PTO Practice</h1>
 
-      <div className=" flex flex-col text-2xl text-yellow-500 m-10 items-center">
+      <div className=" flex flex-col text-2xl text-yellow-500 items-center">
         <h2 className="self-center pb-5">Question</h2>
 
-        <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white">
+        <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white break-words w-2/3">
           <p>{" public class program"}</p>
 
           <p>{"{"}</p>

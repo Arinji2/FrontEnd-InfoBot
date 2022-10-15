@@ -51,7 +51,7 @@ function Account() {
   };
   return (
     <React.Fragment>
-      <div className="flex flex-col justify-center items-center h-screen absolute w-screen -z-10">
+      <div className="flex flex-col justify-center items-center h-screen absolute w-full -z-10">
         <div className="relative bottom-20">
           {loading ? loaderChoice(1) : loaderChoice(0)}
         </div>

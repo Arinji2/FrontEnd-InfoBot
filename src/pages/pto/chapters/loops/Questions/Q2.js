@@ -58,7 +58,7 @@ function Q2() {
         setSolutionColor("text-red-400 text-center pt-5");
         setisCorrect("Incorrect Answer!");
         setSolution(
-          "since there is no break statement due to the choice being 4 there is a fall through from case 4 and value of j is incremented that many times."
+          "Since there is no break statement due to the choice being 4 there is a fall through from case 4 and value of j is incremented that many times."
         );
         setRedirectButton("Click to Redirect");
       } catch (e) {
@@ -71,10 +71,10 @@ function Q2() {
     <div className="pt-20">
       <h1 className="text-center text-4xl">PTO Practice</h1>
 
-      <div className=" flex flex-col text-2xl text-yellow-500 m-10 items-center">
+      <div className=" flex flex-col text-2xl text-yellow-500 items-center">
         <h2 className="self-center pb-5">Question</h2>
 
-        <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white">
+        <div className="text-left bg-black-950 p-5 rounded-lg text-white md:shadow-none shadow-md shadow-white break-words w-2/3">
           <p>{"public class SwitchTest"}</p>
 
           <p>{"{"}</p>
