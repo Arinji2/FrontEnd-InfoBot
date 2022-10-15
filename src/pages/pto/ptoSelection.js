@@ -54,7 +54,10 @@ function PtoSelection() {
   };
   const loaderChoice = (choice) => {
     if (choice === 1) {
-      if (opacity === "") changeOpacity();
+      if (opacity === "") {
+        console.log("error");
+        changeOpacity();
+      }
       return (
         <Triangle color="yellow" height="200" width="200" visible={loading} />
       );
@@ -62,8 +65,8 @@ function PtoSelection() {
   };
   return (
     <React.Fragment>
-      <div className="flex flex-col justify-center items-center h-screen absolute w-screen -z-10">
-        <div className="relative bottom-20 self-center ">
+      <div className="flex flex-col justify-center items-center h-screen w-full absolute -z-10">
+        <div className="relative ">
           {loading ? loaderChoice(1) : loaderChoice(2)}
         </div>
       </div>
