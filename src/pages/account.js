@@ -7,13 +7,15 @@ import {
   faRefresh,
   faArrowAltCircleLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import { Triangle } from "react-loader-spinner";
 function Account() {
   const [Email, setEmail] = useState("");
   const [Name, setName] = useState("");
   const [Correct, setCorrect] = useState(0);
   const [Wrong, setWrong] = useState(0);
   const [Total, setTotal] = useState(0);
-  onAuthStateChanged(auth, (currentUser) => {
+  const [loading, setLoading] = useState(true);
+  const unsubscribe = onAuthStateChanged(auth, () => {
     if (auth != null) {
       getDatabase();
     } else window.location.assign("/login");
@@ -26,6 +28,8 @@ function Account() {
     setCorrect(docGet.data().CorrectQuestions);
     setWrong(docGet.data().WrongQuestions);
     calcTotal();
+
+    unsubscribe();
   };
   const signOut = async () => {
     auth.signOut().then(() => {
@@ -35,59 +39,82 @@ function Account() {
   const calcTotal = () => {
     setTotal(Math.round((Correct / (Correct + Wrong)) * 100));
     if (Correct === 0 && Wrong === 0) setTotal(0);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
+  const loaderChoice = (choice) => {
+    if (choice === 1)
+      return (
+        <Triangle color="yellow" height="200" width="200" visible={loading} />
+      );
   };
   return (
-    <div>
-      <div className="flex flex-col justify-center text-4xl gap-5 pt-20 items-center pb-5 border-b-2 border-white rounded-lg text-center">
-        <h1>
-          Welcome Back <br />
-          <span className="text-yellow-400">{Name}</span>
-        </h1>
-        <h2 className="text-2xl">
-          Current User: <br /> <span className="text-yellow-400">{Email}</span>
-        </h2>
+    <React.Fragment>
+      <div className="flex flex-col justify-center items-center h-screen absolute w-screen -z-10">
+        <div className="relative bottom-20">
+          {loading ? loaderChoice(1) : loaderChoice(0)}
+        </div>
       </div>
-      <h2 className="text-center text-4xl pt-10">PTO Statistics</h2>
+      <div
+        className={
+          loading
+            ? "opacity-0"
+            : "opacity-100 transition-all ease-in-out duration-500"
+        }
+      >
+        <div className="flex flex-col justify-center text-4xl gap-5 pt-20 items-center pb-5 border-b-2 border-white rounded-lg text-center">
+          <h1>
+            Welcome Back <br />
+            <span className="text-yellow-400">{Name}</span>
+          </h1>
+          <h2 className="text-2xl">
+            Current User: <br />{" "}
+            <span className="text-yellow-400">{Email}</span>
+          </h2>
+        </div>
+        <h2 className="text-center text-4xl pt-10">PTO Statistics</h2>
 
-      <div className="pt-10 flex flex-row justify-evenly text-3xl flex-wrap gap-4 m-5">
-        <h3>
-          Correct: <span className="text-yellow-400">{Correct}</span>
-        </h3>
-        <h3>
-          Wrong: <span className="text-yellow-400">{Wrong}</span>
-        </h3>
-        <h3>
-          Total: <span className="text-yellow-400">{Correct + Wrong}</span>
-        </h3>
-        <h3>
-          Percentage: <span className="text-yellow-400">{Total}%</span>
-        </h3>
+        <div className="pt-10 flex flex-row justify-evenly text-3xl flex-wrap gap-4 m-5">
+          <h3>
+            Correct: <span className="text-yellow-400">{Correct}</span>
+          </h3>
+          <h3>
+            Wrong: <span className="text-yellow-400">{Wrong}</span>
+          </h3>
+          <h3>
+            Total: <span className="text-yellow-400">{Correct + Wrong}</span>
+          </h3>
+          <h3>
+            Percentage: <span className="text-yellow-400">{Total}%</span>
+          </h3>
+        </div>
+        <div className="flex items-center justify-center pb-5 border-b-2 border-white rounded-lg ">
+          <p
+            className="mt-10 border-2 border-yellow-500 p-2 rounded-lg bg-yellow-500 hover:border-yellow-600 hover:bg-yellow-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200"
+            onClick={getDatabase}
+          >
+            Refresh <FontAwesomeIcon icon={faRefresh} />
+          </p>
+        </div>
+        <div className="flex flex-col items-center">
+          <p
+            className="mt-10 border-2 text-2xl border-yellow-500 p-2 rounded-lg bg-yellow-500 hover:border-yellow-600 hover:bg-yellow-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200 mb-5"
+            onClick={signOut}
+          >
+            Sign Out <FontAwesomeIcon icon={faRefresh} />
+          </p>
+          <p
+            className="mt-10 border-2 text-2xl border-yellow-500 p-2 rounded-lg bg-yellow-500 hover:border-yellow-600 hover:bg-yellow-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200 mb-5"
+            onClick={() => {
+              window.location.assign("/dashboard");
+            }}
+          >
+            Back to Dashboard <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+          </p>
+        </div>
       </div>
-      <div className="flex items-center justify-center pb-5 border-b-2 border-white rounded-lg ">
-        <p
-          className="mt-10 border-2 border-yellow-500 p-2 rounded-lg bg-yellow-500 hover:border-yellow-600 hover:bg-yellow-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200"
-          onClick={getDatabase}
-        >
-          Refresh <FontAwesomeIcon icon={faRefresh} />
-        </p>
-      </div>
-      <div className="flex flex-col items-center">
-        <p
-          className="mt-10 border-2 text-2xl border-yellow-500 p-2 rounded-lg bg-yellow-500 hover:border-yellow-600 hover:bg-yellow-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200 mb-5"
-          onClick={signOut}
-        >
-          Sign Out <FontAwesomeIcon icon={faRefresh} />
-        </p>
-        <p
-          className="mt-10 border-2 text-2xl border-yellow-500 p-2 rounded-lg bg-yellow-500 hover:border-yellow-600 hover:bg-yellow-600 hover:shadow-sm hover:shadow-white hover:cursor-pointer transition-all ease-in-out duration-200 mb-5"
-          onClick={() => {
-            window.location.assign("/dashboard");
-          }}
-        >
-          Back to Dashboard <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-        </p>
-      </div>
-    </div>
+    </React.Fragment>
   );
 }
 
