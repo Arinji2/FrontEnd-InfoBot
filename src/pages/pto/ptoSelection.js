@@ -53,10 +53,12 @@ function PtoSelection() {
     }, 2000);
   };
   const loaderChoice = (choice) => {
-    if (choice === 1)
+    if (choice === 1) {
+      if (opacity === "") changeOpacity();
       return (
         <Triangle color="yellow" height="200" width="200" visible={loading} />
       );
+    }
   };
   return (
     <React.Fragment>
