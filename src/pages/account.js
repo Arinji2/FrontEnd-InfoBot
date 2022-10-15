@@ -46,7 +46,7 @@ function Account() {
   const loaderChoice = (choice) => {
     if (choice === 1)
       return (
-        <Triangle color="white" height="200" width="200" visible={loading} />
+        <Triangle color="yellow" height="200" width="200" visible={loading} />
       );
   };
   return (
