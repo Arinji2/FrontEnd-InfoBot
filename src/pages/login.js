@@ -1,33 +1,49 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { auth } from "../firebase-config";
+import { auth, db } from "../firebase-config";
 import {
   onAuthStateChanged,
   GoogleAuthProvider,
   signInWithPopup,
-  signOut,
 } from "firebase/auth";
+import { getDoc, doc, setDoc } from "firebase/firestore";
 import { ThreeCircles } from "react-loader-spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 function Verify() {
-  const [counter, setCounter] = useState(0);
   const [userTrue, setUserTrue] = useState(false);
   const loginwithGoogle = () => {
     const googleProvider = new GoogleAuthProvider();
     signInWithPopup(auth, googleProvider)
       .then(() => {
-        console.log(auth.currentUser);
+        getDocs();
       })
       .catch((error) => {
-        console.log(error);
+        console.log("Error" + error);
       });
+  };
+
+  const getDocs = async () => {
+    const docRef = doc(db, "users", auth.currentUser.uid);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+    } else {
+      await setDoc(doc(db, "users", auth.currentUser.uid), {
+        correctQuestions: 0,
+        wrongQuestions: 0,
+        email: auth.currentUser.email,
+        uid: auth.currentUser.uid,
+        staff: false,
+      });
+    }
   };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserTrue(true);
+        getDocs();
         setTimeout(() => {
           window.location.assign("/dashboard");
         }, 2000);
