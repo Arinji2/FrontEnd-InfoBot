@@ -16,8 +16,7 @@ function Account() {
   onAuthStateChanged(auth, (currentUser) => {
     if (auth != null) {
       getDatabase();
-      console.log("Run");
-    }
+    } else window.location.assign("/login");
   });
   const getDatabase = async () => {
     const docRef = doc(db, "users", auth.currentUser.uid);

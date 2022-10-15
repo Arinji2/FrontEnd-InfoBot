@@ -31,12 +31,17 @@ function Verify() {
     if (docSnap.exists()) {
     } else {
       await setDoc(doc(db, "users", auth.currentUser.uid), {
-        correctQuestions: 0,
-        wrongQuestions: 0,
+        CorrectQuestions: 0,
+        WrongQuestions: 0,
         email: auth.currentUser.email,
         uid: auth.currentUser.uid,
         staff: false,
-      });
+        userName: auth.currentUser.displayName,
+      })
+        .then()
+        .catch((error) => {
+          console.log(error);
+        });
     }
   };
   useEffect(() => {
@@ -46,7 +51,7 @@ function Verify() {
         getDocs();
         setTimeout(() => {
           window.location.assign("/dashboard");
-        }, 2000);
+        }, 5000);
       }
     });
   });
