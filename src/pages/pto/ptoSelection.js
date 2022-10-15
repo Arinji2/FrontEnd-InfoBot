@@ -44,6 +44,8 @@ function PtoSelection() {
     window.location.assign("/specificTest");
   };
   const changeOpacity = () => {
+    if (opacity === "opacity-100 transition-all ease-in-out duration-500")
+      setLoading(false);
     setOpacity("opacity-0");
     setTimeout(() => {
       setOpacity("opacity-100 transition-all ease-in-out duration-500");
@@ -59,7 +61,7 @@ function PtoSelection() {
   return (
     <React.Fragment>
       <div className="flex flex-col justify-center items-center h-screen absolute w-screen -z-10">
-        <div className="relative bottom-20">
+        <div className="relative bottom-20 self-center ">
           {loading ? loaderChoice(1) : loaderChoice(2)}
         </div>
       </div>
