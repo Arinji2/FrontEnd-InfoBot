@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { auth, db } from "../firebase-config";
 import { doc, getDoc } from "firebase/firestore";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRefresh,

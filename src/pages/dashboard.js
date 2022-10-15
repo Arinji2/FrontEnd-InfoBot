@@ -1,24 +1,25 @@
 import React from "react";
 import Account from "../assets/account.svg";
 import Coding from "../assets/code.svg";
-import { useState, useEffect } from "react";
-import { auth, storage } from "../firebase-config";
+import { useEffect } from "react";
+import { auth /*storage*/ } from "../firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
-import { uploadBytes, ref } from "firebase/storage";
+/* import { uploadBytes, ref } from "firebase/storage"; */
 function Dashboard() {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (auth.currentUser.emailVerified !== true)
         window.location.replace("/verify");
-      getStorage();
     });
   });
+  /*
   const getStorage = () => {
     const storageRef = ref(storage, "Articles/Test");
     var file = new File(["foo", "bar"], "foobar.txt");
     uploadBytes(storageRef, file);
     console.log("Uploaded");
   };
+  */
   return (
     <div>
       <h1 className="text-center text-4xl text-yellow-400 pt-20 pb-10">
