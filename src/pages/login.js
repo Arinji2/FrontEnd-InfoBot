@@ -36,6 +36,12 @@ function Verify() {
         email: auth.currentUser.email,
         uid: auth.currentUser.uid,
         staff: false,
+        writer: false,
+        verifier: false,
+        developer: false,
+        executive: false,
+        coins: 0,
+        premium: false,
         userName: auth.currentUser.displayName,
       })
         .then()
